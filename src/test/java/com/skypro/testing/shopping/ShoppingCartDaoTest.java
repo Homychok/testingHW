@@ -11,12 +11,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ShoppingCartDaoTest {
     private UUID userId;
-    private Item item1;
-    private Item item2;
-    private Item item3;
-    private Item item4;
-    private Item item5;
-    private Item item6;
+    private Item item1 = new Item("Евгений", 30);;
+    private Item item2 = new Item("Марина", 60);;
+    private Item item3 = new Item("Алина", 90);;
+    private Item item4 = new Item("Ветерок", 100);;
+    private Item item5 = new Item("Ежик", 0);;
+    private Item item6 = new Item("", 10);;
     private Map<UUID, List<Item>> users;
     private ShoppingCartDao dao;
     @BeforeEach
@@ -24,12 +24,12 @@ class ShoppingCartDaoTest {
         //создаем тестовые данные
         dao = new ShoppingCartDao();
         userId = UUID.randomUUID();
-        Item item1 = new Item("Евгений", 30);
-        Item item2 = new Item("Марина", 60);
-        Item item3 = new Item("Алина", 90);
-        Item item4 = new Item("Ветерок", 100);
-        Item item5 = new Item("Ежик", 0);
-        Item item6 = new Item("", 10);
+//        Item item1 = new Item("Евгений", 30);
+//        Item item2 = new Item("Марина", 60);
+//        Item item3 = new Item("Алина", 90);
+//        Item item4 = new Item("Ветерок", 100);
+//        Item item5 = new Item("Ежик", 0);
+//        Item item6 = new Item("", 10);
         users = new HashMap<>();
     }
     @Test
